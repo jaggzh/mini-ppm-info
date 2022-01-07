@@ -33,7 +33,7 @@ struct tests_st tests[] = {
 int main(int argc, char *argv[]) {
 	struct ppm_info_st ppminfo;
 	// Loop through tests
-	printf("Running %d tests:\n", sizeof(tests)/sizeof(*tests));
+	printf("Running %d tests:\n", (int)(sizeof(tests)/sizeof(*tests)));
 	for (int i=0; i<sizeof(tests)/sizeof(*tests); i++) {
 		char *buf=tests[i].buf;
 		int buflen=strlen(buf);

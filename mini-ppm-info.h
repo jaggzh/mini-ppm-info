@@ -21,13 +21,6 @@
 #define PPM_F_WSPFX 1     /* Skip initial whitespace too
                            * (Used in all but the initial call where P6 magic
                            * must come first) */
-/* #define PPM_F_DATANEXT 2  /* Expecting data next. Without this, we skip
-                           * whitespace after comments without checking.
-                           * but when expecting data we need to ensure 
-                           * Use this in all but the final call, where
-                           * img data must be separated by whitespace even if
-                           * the a full comment line ended with \n -- that \n
-                           * is not considered whitespace) */
 
 // Result information:
 struct ppm_info_st {
