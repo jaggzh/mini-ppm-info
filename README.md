@@ -8,14 +8,14 @@ gives the offset to the data.
 
 
 
-## Usage:
+## Usage Methods:
+1. Method 1: Copy files directly into your project folder
+2. Method 2: Include as a subrepository (`git submodule add https://github.com/jaggzh/mini-ppm-info`) (Then you must reference those files in the subdir)
 
-Copy mini-ppm-info.c and .h to your project (or otherwise link the .c)
-
+## Example
 ```c
-/* Optionally: Define this if you require data to exist. Without it,
-data is not required (only the header parsed), AND whitespace is not
-needed after the header. */
+/* Define this if you require data to exist, otherwise the lib
+   accepts plain headers, AND whitespace is not needed after the header. */
 //#define PPM_REQUIRES_DATA // optional
 #include "mini-ppm-info.h"
 
