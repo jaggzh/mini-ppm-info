@@ -10,7 +10,7 @@ gives the offset to the data.
 
 ## Usage Methods:
 1. Method 1: Copy files directly into your project folder
-2. Method 2: Include as a subrepository (`git submodule add https://github.com/jaggzh/mini-ppm-info`) (Then you must reference those files in the subdir)
+2. Method 2: Include as a subrepository (`git submodule add https://github.com/jaggzh/mini-ppm-info`) (Then you must reference those files in the subdir).  Use `git submodule update` within the mini-ppm-info/ directory to pull updates later.
 
 ## Example
 ```c
