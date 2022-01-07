@@ -1,9 +1,10 @@
-all: ws
+all: run-test
 
-ws: whitespace-skip run-ws
+run-test: test
+	./test
 
-run-ws:
-	./whitespace-skip
+test: test.c mini-ppm-info.c mini-ppm-info.h
+	cc -ggdb3 -o test test.c mini-ppm-info.c
 
-whitespace-skip: whitespace-skip.c
-	cc -ggdb3 -o whitespace-skip whitespace-skip.c
+vi:
+	vim Makefile test.c mini-ppm-info.c mini-ppm-info.h
