@@ -21,9 +21,14 @@ needed after the header. */
 
 struct ppm_info_st ppminfo;
 err = get_ppm_info(&ppminfo, ppm_data, length_of_ppm_data);
+// returns 1 on error, 0 on false
+printf("Width: %d, Height: %d, Color max: %d, Data offset: %d\n",
+		ppminfo.w,
+		ppminfo.h,
+		ppminfo.cmax,
+		ppminfo.d_off);
 
 int get_ppm_info(struct ppm_info_st *pst, char *buf, uint16_t blen);
-// returns 1 on error, 0 on false
 // Fills *pst with values on success (.w, .h, .cmax)
 // buf: Buffer which contains at least the header and maybe some data
 // blen: Length of actual data available (so we don't run off the end)
