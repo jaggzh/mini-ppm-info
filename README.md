@@ -12,7 +12,7 @@ gives the offset to the data.
 
 Copy mini-ppm-info.c and .h to your project (or otherwise link the .c)
 
- c
+```c
 /* Optionally: Define this if you require data to exist. Without it,
 data is not required (only the header parsed), AND whitespace is not
 needed after the header. */
@@ -29,4 +29,4 @@ int get_ppm_info(struct ppm_info_st *pst, char *buf, uint16_t blen);
 // blen: Length of actual data available (so we don't run off the end)
 //       it is not necessarily your buffer's full size, for we stop when
 //       we reach the start of data anyway.
- 
+```
