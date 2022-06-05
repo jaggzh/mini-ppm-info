@@ -38,9 +38,10 @@ struct ppm_info_st {
 // blen: length of actual data available (so we don't run off the end)
 //       it is not necessarily your buffer's full size, and we stop when
 //       we reach the start of data anyway.
-int get_ppm_info(struct ppm_info_st *pst, char *buf, uint16_t blen);
+int get_ppm_info(struct ppm_info_st *pst, const char *buf, uint16_t blen);
 
 // Internal use (skips whitespace + comments)
 void skip_ws_comments(uint16_t *storei, uint8_t *wsfound,
-		char *b, uint16_t i, uint16_t blen, uint8_t flags);
+                      const char *b, uint16_t i, uint16_t blen,
+                      uint8_t flags);
 
