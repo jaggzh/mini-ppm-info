@@ -22,6 +22,10 @@
                            * (Used in all but the initial call where P6 magic
                            * must come first) */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // Result information:
 struct ppm_info_st {
 	uint16_t w, h, cmax, d_off; // width, height, color max, data offset
@@ -44,4 +48,8 @@ int get_ppm_info(struct ppm_info_st *pst, const char *buf, uint16_t blen);
 void skip_ws_comments(uint16_t *storei, uint8_t *wsfound,
                       const char *b, uint16_t i, uint16_t blen,
                       uint8_t flags);
+
+#ifdef __cplusplus
+}
+#endif
 
